@@ -1,0 +1,22 @@
+# patika.dev-SQL-dev1
+patika.dev / SQL / ödev 1
+
+--1. Sorgu (film tablosunda bulunan başlık ve açıklama sütunlarındaki verileri sıralayınız.)
+--SELECT title, description FROM film;
+
+--2. Sorgu (film tablosunda bulunan tüm sütunlardaki veriler film uzunluğu (uzunluk) 60 dan büyük VE 75 on küçük olma koşullarıyla sıralayınız.)
+--SELECT * FROM film
+--WHERE length >60 OR length <75
+
+--3. Sorgu (film tablosunda bulunan tüm sütunlardaki veriler rent_rate 0,99 VE replace_cost 12,99 VEYA 28,99 olma koşullarıyla sıralayınız.)
+--SELECT * FROM film
+--WHERE rental_rate = 0.99 AND replacement_cost = 12.99 OR replacement_cost = 28.99
+
+--4. Sorgu (müşteri tablosunda bulunan ad sütunundaki değer 'Mary' olan kişinin soyadı sütunundaki değeri nedir?)
+(Cevap = Smith)
+--SELECT first_name, last_name FROM customer
+--WHERE first_name = 'Mary'
+
+--5. Sorgu (film tablosundaki uzunluk(uzunluk) 50 on büyük OLMAYIP aynı zamanda kiralama_oran değeri 2,99 veya 4,99 OLMAYAN verilerini sıralayınız.)
+--SELECT * FROM film
+--WHERE NOT length >50 AND rental_rate <> 2.99 AND rental_rate <> 4.99
